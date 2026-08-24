@@ -2160,6 +2160,27 @@
     });
   }
 
+  /* stay current: refresh automatically on load and every 5 minutes while the
+     tab is open (only when a Finnhub key is saved — no key, no calls) */
+  var AUTO_REFRESH_MS = 5 * 60 * 1000;
+  (function autoRefresh(){
+    var hasKey = false;
+    try{ hasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
+    if(!hasKey) return;
+    performLiveUpdate();
+    setInterval(function(){
+      var stillHasKey = false;
+      try{ stillHasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
+      if(stillHasKey && !document.hidden) performLiveUpdate();
+    }, AUTO_REFRESH_MS);
+  })();
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden) return;
+    var hasKey = false;
+    try{ hasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
+    if(hasKey) performLiveUpdate();
+  });
+
   var themeBtn = document.getElementById('themeToggle');
   if(themeBtn){
     var label = themeBtn.querySelector('.theme-label');
