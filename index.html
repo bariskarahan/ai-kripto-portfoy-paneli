@@ -7,7 +7,18 @@
     document.documentElement.setAttribute('data-theme','dark');
   }
   try{
-    if(localStorage.getItem('portfolioGateOK') !== '1'){
+    var already = localStorage.getItem('portfolioGateOK') === '1';
+    var urlKey = new URLSearchParams(location.search).get('k');
+    if(!already && urlKey && window.crypto && window.crypto.subtle){
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(urlKey)).then(function(buf){
+        var hex = Array.prototype.map.call(new Uint8Array(buf), function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+        if(hex === '85d6385b945c0d602103db39b0b654b2af93b5127938e26a959c123f0789b948'){
+          try{ localStorage.setItem('portfolioGateOK','1'); }catch(e){}
+          document.documentElement.className = document.documentElement.className.replace(/\blocked\b/, '').trim();
+        }
+      });
+    }
+    if(!already){
       document.documentElement.className += (document.documentElement.className ? ' ' : '') + 'locked';
     }
   }catch(e){

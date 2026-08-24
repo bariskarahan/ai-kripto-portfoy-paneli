@@ -2,7 +2,7 @@
   "name": "AI & Kripto Portföyü",
   "short_name": "Portföy",
   "description": "9 pozisyonluk AI altyapısı ve kripto madenciliği temalı kişisel portföy takip paneli.",
-  "start_url": "./",
+  "start_url": "./?k=2001",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
