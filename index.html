@@ -286,15 +286,15 @@
   body.privacy-on .eye-open{display:none;}
   body:not(.privacy-on) .eye-closed{display:none;}
   .toolbar{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:8px;align-items:center;}
-  .currency-switch{display:inline-flex;background:var(--surface-alt);border:1px solid var(--border);border-radius:999px;padding:3px;gap:2px;}
+  .currency-block{display:flex;flex-direction:column;align-items:flex-end;gap:3px;}
+  .currency-switch{display:inline-flex;background:var(--surface-alt);border:1px solid var(--border);border-radius:999px;padding:3px;gap:2px;flex-shrink:0;}
   .currency-switch button{
     font-family:"Plus Jakarta Sans",sans-serif;font-size:13px;font-weight:700;min-width:28px;
     color:var(--ink-muted);background:transparent;border:none;border-radius:999px;padding:6px 10px;cursor:pointer;
   }
   .currency-switch button.active{background:var(--accent);color:#fff;}
   .currency-switch button:hover:not(.active){color:var(--ink-primary);}
-  .currency-note{font-size:11px;color:var(--ink-muted);width:100%;text-align:right;margin-top:2px;}
-  .currency-note:empty{display:none;}
+  .currency-note{font-size:11px;color:var(--ink-muted);text-align:right;white-space:nowrap;line-height:1.3;min-height:1.3em;}
   .update-panel{margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--surface-alt);border:1px solid var(--border);font-size:13px;line-height:1.6;color:var(--ink-secondary);text-align:left;max-width:420px;margin-left:auto;}
   .update-panel b{color:var(--ink-primary);}
   .update-key-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
@@ -586,13 +586,15 @@
       Fiyatlar: 21 Ağustos 2026 kapanışı<br>
       Haberler: Temmuz–Ağustos 2026 gelişmeleri<br>
       <div class="toolbar">
-        <div class="currency-switch" id="currencySwitch" role="group" aria-label="Para birimi">
-          <button type="button" data-cur="USD" class="active">$</button>
-          <button type="button" data-cur="TRY">₺</button>
-          <button type="button" data-cur="GBP">£</button>
-          <button type="button" data-cur="EUR">€</button>
+        <div class="currency-block">
+          <div class="currency-switch" id="currencySwitch" role="group" aria-label="Para birimi">
+            <button type="button" data-cur="USD" class="active">$</button>
+            <button type="button" data-cur="TRY">₺</button>
+            <button type="button" data-cur="GBP">£</button>
+            <button type="button" data-cur="EUR">€</button>
+          </div>
+          <span class="currency-note" id="currencyNote"></span>
         </div>
-        <span class="currency-note" id="currencyNote"></span>
         <button class="privacy-btn" id="themeToggle" type="button" aria-label="Görünümü değiştir">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
