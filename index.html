@@ -151,7 +151,14 @@
   }
   .hero > *{min-width:0;}
   .hero-top > *{min-width:0;}
-  .hero-value .label{font-size:14px;color:var(--hero-fg-soft);margin-bottom:6px;}
+  .hero-value .label{font-size:14px;color:var(--hero-fg-soft);margin-bottom:6px;display:inline-flex;align-items:center;gap:7px;}
+  .live-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.02em;padding:3px 9px 3px 7px;border-radius:999px;background:var(--hero-glass);color:var(--hero-fg-faint);text-transform:none;}
+  .live-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+  .live-badge.live{color:var(--hero-good);}
+  .live-badge.live::before{animation:live-pulse 1.6s ease-in-out infinite;}
+  .live-badge.err{color:var(--hero-bad);}
+  @keyframes live-pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  @media (prefers-reduced-motion: reduce){.live-badge.live::before{animation:none;}}
   .hero-value .figure{font-size:46px;font-weight:800;line-height:1;letter-spacing:-0.02em;max-width:100%;color:var(--hero-fg);}
   .hero-deltas{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
   .pill{
@@ -542,7 +549,7 @@
   <section class="hero">
     <div class="hero-top">
       <div class="hero-value">
-        <div class="label">Güncel Toplam Değer</div>
+        <div class="label">Güncel Toplam Değer <span class="live-badge" id="liveBadge">statik veri</span></div>
         <div class="figure num" id="heroValue">$9.704,98</div>
         <div class="hero-deltas">
           <span class="pill critical" id="heroDelta24h">▼ Son 24 Saat: −$24,52 <span class="plain-label">(−0,25%)</span></span>
@@ -1813,7 +1820,14 @@
   var heroValueEl = document.getElementById('heroValue');
   var heroDelta24hEl = document.getElementById('heroDelta24h');
   var heroDeltaCostEl = document.getElementById('heroDeltaCost');
+  var liveBadgeEl = document.getElementById('liveBadge');
   var KEY_STORAGE = 'finnhubApiKey';
+
+  function setLiveBadge(state, label){
+    if(!liveBadgeEl) return;
+    liveBadgeEl.className = 'live-badge' + (state ? ' ' + state : '');
+    liveBadgeEl.textContent = label;
+  }
 
   function numTR(n, decimals){
     var neg = n < 0;
@@ -1927,6 +1941,7 @@
     try{ key = (localStorage.getItem(KEY_STORAGE) || '').trim(); }catch(e){}
     if(!key){
       setStatus('Önce yukarıya bir Finnhub API key gir ve "Kaydet"e bas.', 'err');
+      setLiveBadge('', 'statik veri');
       if(keyInput) keyInput.focus();
       return;
     }
@@ -1965,11 +1980,14 @@
       var stamp = now.toLocaleString('tr-TR', {day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit'});
       if(failed.length){
         setStatus('<b>Son güncelleme:</b> ' + stamp + ' — Finnhub canlı fiyatları. ' + failed.length + ' pozisyon çekilemedi (' + failed.join(', ') + '); son bilinen değerleriyle gösteriliyor.', 'err');
+        setLiveBadge('err', failed.length + ' pozisyon eski');
       } else {
         setStatus('<b>Son güncelleme:</b> ' + stamp + ' — Finnhub canlı fiyatlarıyla güncellendi.', 'ok');
+        setLiveBadge('live', 'canlı');
       }
     }).catch(function(){
       setStatus('Güncelleme başarısız oldu — API key\'i veya bağlantını kontrol et.', 'err');
+      setLiveBadge('err', 'bağlantı hatası');
     }).finally(function(){
       if(liveUpdateBtn) liveUpdateBtn.disabled = false;
     });
