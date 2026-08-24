@@ -29,14 +29,14 @@
 <title>AI &amp; Kripto Portföyü</title>
 <style>
   :root{
-    --bg:#F3F1FA;
-    --surface:#FFFFFF;
-    --surface-alt:#F8F6FD;
+    --bg:#E8E6EF;
+    --surface:#F3F1F7;
+    --surface-alt:#ECE9F3;
     --ink-primary:#150E2E;
     --ink-secondary:#5B5578;
     --ink-muted:#8F89A8;
-    --border:rgba(21,14,46,0.09);
-    --hairline:#EBE7F6;
+    --border:rgba(21,14,46,0.10);
+    --hairline:#DEDBE8;
     --accent:#6D2BD9;
     --accent-soft:#EFE4FC;
     --status-good:#0FAE7E;
@@ -264,6 +264,22 @@
   .section-head{margin-bottom:6px;}
   .section-head h2{font-size:21px;margin-bottom:5px;}
   .section-head .sub{font-size:14px;color:var(--ink-muted);}
+
+  /* daily AI commentary */
+  .ai-daily{border:1px solid var(--accent-soft);}
+  .ai-daily-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:12px;}
+  .ai-badge{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:5px 12px;}
+  .ai-daily-head .sub{margin:6px 0 0;font-size:13px;color:var(--ink-muted);}
+  .outlook-pill{font-size:12px;font-weight:700;border-radius:999px;padding:5px 12px;white-space:nowrap;}
+  .outlook-pill.olumlu{color:var(--status-good);background:var(--status-good-soft);}
+  .outlook-pill.olumsuz{color:var(--status-critical);background:var(--status-critical-soft);}
+  .outlook-pill.notr{color:var(--ink-secondary);background:var(--surface-alt);}
+  .ai-summary{font-size:15px;line-height:1.6;color:var(--ink-primary);font-weight:600;margin:0 0 16px;}
+  .ai-block{margin-bottom:14px;}
+  .ai-block:last-child{margin-bottom:0;}
+  .ai-block h4{font-size:13.5px;font-weight:700;color:var(--ink-primary);margin:0 0 5px;}
+  .ai-block p{font-size:14px;line-height:1.65;color:var(--ink-secondary);margin:0;}
+  .ai-disclaimer{font-size:11.5px;color:var(--ink-muted);margin:16px 0 0;padding-top:12px;border-top:1px solid var(--hairline);}
 
   /* legend */
   .legend{display:flex;gap:18px;margin-bottom:14px;flex-wrap:wrap;}
@@ -798,6 +814,19 @@
       <div class="stat"><span class="k">En büyük ağırlık</span><span class="v">IREN · %20,3</span></div>
       <div class="stat"><span class="k">En sert kayıp</span><span class="v">ORCL · −%36,3</span></div>
     </div>
+  </section>
+
+  <section class="card ai-daily" id="aiDaily">
+    <div class="ai-daily-head">
+      <div>
+        <span class="ai-badge">🤖 Günlük AI Yorumu</span>
+        <p class="sub" id="aiDailyDate">Yükleniyor…</p>
+      </div>
+      <span class="outlook-pill" id="aiOutlookPill"></span>
+    </div>
+    <p class="ai-summary" id="aiDailySummary"></p>
+    <div id="aiDailyBody"></div>
+    <p class="ai-disclaimer">Bu yorum her gün otomatik oluşturulur (güncel haber ve verilere göre), yatırım tavsiyesi değildir.</p>
   </section>
 
   <section class="card">
@@ -2335,6 +2364,43 @@
   document.addEventListener('visibilitychange', function(){
     if(!document.hidden) autoUpdateCycle();
   });
+
+  /* daily AI commentary — written fresh once a day (see .github/workflows),
+     read here with a plain same-origin fetch */
+  (function loadDailyCommentary(){
+    var dateEl = document.getElementById('aiDailyDate');
+    var pillEl = document.getElementById('aiOutlookPill');
+    var summaryEl = document.getElementById('aiDailySummary');
+    var bodyEl = document.getElementById('aiDailyBody');
+    var sectionEl = document.getElementById('aiDaily');
+    if(!sectionEl) return;
+    fetch('./daily-commentary.json', {cache: 'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error('missing'); return r.json(); })
+      .then(function(data){
+        if(!data || !data.sections) throw new Error('bad data');
+        if(dateEl) dateEl.textContent = data.date || '';
+        if(summaryEl) summaryEl.textContent = data.summary || '';
+        if(pillEl){
+          pillEl.textContent = data.outlookLabel || '';
+          pillEl.className = 'outlook-pill ' + (data.outlook || 'notr');
+        }
+        if(bodyEl){
+          bodyEl.innerHTML = '';
+          data.sections.forEach(function(sec){
+            var block = document.createElement('div');
+            block.className = 'ai-block';
+            var h4 = document.createElement('h4');
+            h4.textContent = sec.title;
+            var p = document.createElement('p');
+            p.textContent = sec.body;
+            block.appendChild(h4);
+            block.appendChild(p);
+            bodyEl.appendChild(block);
+          });
+        }
+      })
+      .catch(function(){ sectionEl.hidden = true; });
+  })();
 
   var themeBtn = document.getElementById('themeToggle');
   if(themeBtn){

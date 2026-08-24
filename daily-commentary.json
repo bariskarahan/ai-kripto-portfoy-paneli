@@ -1,0 +1,24 @@
+{
+  "date": "24 Ağustos 2026",
+  "outlook": "notr",
+  "outlookLabel": "Karışık / Temkinli",
+  "summary": "Portföyün genelinde toparlanma var ama hâlâ maliyetin altındasın; kazandıran taraf yazılım/AI hisseleri (PLTR başta), kaybettiren taraf kripto madenciliği (IREN, CLSK, RIOT). Bu ayrışma son 10 günün ana teması.",
+  "sections": [
+    {
+      "title": "Bugün ve son günlerde ne oldu",
+      "body": "Palantir (PLTR), Ağustos başındaki güçlü bilançosunun ardından ay boyunca yaklaşık %46 yükseldi — portföyünün en iyi performansı, maliyetinin %28 üzerinde. Diğer yandan kripto madenciliği tarafında ayrışma var: Riot Platforms, Anthropic ile 9,1 milyar dolarlık dev bir bilgi işlem kiralama anlaşması imzaladı ve piyasa bunu ödüllendirdi; ama aynı hafta CleanSpark zayıf bilanço açıkladı (gelir %30 düştü, zarar yazdı) ve hissesi geriledi. Yani aynı sektördeki iki şirket zıt yönde hareket etti — piyasa artık '‘kripto madencisi AI'ya geçiyor’' hikayesine körü körüne inanmıyor, somut ve imzalanmış anlaşma arıyor."
+    },
+    {
+      "title": "Sektör görünümü (basitçe)",
+      "body": "Portföyünün dörtte üçü iki büyük temaya bağlı: (1) AI için veri merkezi/bulut altyapısı (CRWV, ORCL, PLTR, NOW) ve (2) bitcoin madenciliğinden AI bilgi işlem kiralamaya geçen şirketler (CLSK, RIOT, IREN). Birinci grupta harcamalar çok büyük boyutlarda — büyük teknoloji şirketleri 2026'da toplam 650+ milyar dolar AI yatırımı yapıyor, bu tarihte görülmemiş bir seviye. Bu iyi haber çünkü senin şirketlerin bu harcamadan pay alıyor, ama kötü haber de olabilir çünkü bu kadar büyük harcamanın karşılığında yeterli gelir gelip gelmeyeceği piyasada tartışmalı — yani 'balon mu değil mi' sorusu hâlâ açık. İkinci grupta (kripto madencileri) asıl mesele bitcoin fiyatı değil, madenciliğin kâr edip etmediği: şu an bitcoin üretim maliyeti piyasa fiyatının üzerinde olduğu için şirketler gelirlerini AI kiralamaya kaydırmaya çalışıyor — bu geçiş başarılı olursa hisseler toparlanabilir, olmazsa baskı devam eder."
+    },
+    {
+      "title": "İzlenmesi gereken riskler",
+      "body": "1) Faiz oranları: Uzun vadeli ABD tahvil faizleri yıllar sonrasının en yüksek seviyelerine yakın — bu, büyüme/teknoloji hisselerini (portföyünün tamamı bu kategoride) fiyatlama açısından olumsuz etkileyen bir durum, faizler daha da yükselirse hisseler baskı görebilir. 2) AI harcama-gelir makası: Şirketler AI'ya devasa para harcıyor ama bunun karşılığı olan gelir henüz aynı hızda büyümüyor — bu makas kapanmazsa yeni bir 'AI hisseleri satış dalgası' riski var (Haziran'da bir kez yaşandı). 3) Düzenleme (regülasyon): Kripto madenciliği ve AI veri merkezleri enerji tüketimi nedeniyle giderek daha fazla yerel/federal düzenleyici ilgi çekiyor (elektrik kullanımı, vergi teşvikleri gibi konularda) — şu an acil bir tehdit yok ama uzun vadede maliyetleri artırabilir. 4) Yoğunlaşma: Portföyün tamamı tek bir makro temaya (AI + kripto) bağlı, çeşitlendirme yok — bu, temanın tersine dönmesi durumunda tüm portföyün birlikte düşebileceği anlamına geliyor."
+    },
+    {
+      "title": "Basitçe ne anlama geliyor",
+      "body": "Kısacası: portföyün 'AI çılgınlığına' güçlü şekilde bahis yapıyor ve şu ana kadar bu bahsin yazılım/bulut tarafı (PLTR, NOW) iyi sonuç verdi, kripto-madencilik tarafı (CLSK, RIOT, IREN) henüz vermedi. Yakın vadede en çok izlemen gereken iki şey: (1) faiz oranlarının yönü — düşerse büyüme hisselerine iyi gelir, yükselirse kötü; (2) kripto madencilerinin AI kiralama anlaşmalarını Riot gibi imzalayıp imzalayamayacağı — imzalarlarsa bu üç hisse toparlanabilir."
+    }
+  ]
+}
