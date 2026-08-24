@@ -6,8 +6,16 @@
   }catch(e){
     document.documentElement.setAttribute('data-theme','light');
   }
+  try{
+    if(localStorage.getItem('portfolioGateOK') !== '1'){
+      document.documentElement.className += (document.documentElement.className ? ' ' : '') + 'locked';
+    }
+  }catch(e){
+    document.documentElement.className += (document.documentElement.className ? ' ' : '') + 'locked';
+  }
 })();
 </script>
+<meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap">
 <title>AI &amp; Kripto Portföyü</title>
 <style>
@@ -498,7 +506,74 @@
     .gauge-row{grid-template-columns:88px 1fr 60px;}
     .contrib-head{flex-direction:column;align-items:flex-start;}
   }
+
+  /* access gate */
+  html.locked body{overflow:hidden;}
+  html.locked .page{display:none;}
+  #gate{
+    position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;
+    background:var(--hero-grad, linear-gradient(160deg,#160B3A 0%,#3D1C90 52%,#7C3AED 100%));padding:20px;
+  }
+  html:not(.locked) #gate{display:none;}
+  #gate .box{
+    width:100%;max-width:340px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);
+    border-radius:18px;padding:28px 26px;text-align:center;backdrop-filter:blur(8px);
+  }
+  #gate .box h2{color:#fff;font-size:18px;margin-bottom:6px;}
+  #gate .box p{color:rgba(255,255,255,0.65);font-size:13px;margin:0 0 18px;line-height:1.5;}
+  #gate input{
+    width:100%;padding:11px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.08);color:#fff;font-size:15px;text-align:center;letter-spacing:.05em;
+    font-family:"Plus Jakarta Sans",sans-serif;box-sizing:border-box;
+  }
+  #gate input::placeholder{color:rgba(255,255,255,0.4);}
+  #gate button{
+    width:100%;margin-top:10px;padding:11px;border-radius:10px;border:none;background:#fff;color:#2C1268;
+    font-weight:700;font-size:14px;cursor:pointer;font-family:"Plus Jakarta Sans",sans-serif;
+  }
+  #gate button:hover{opacity:.92;}
+  #gate .err{color:#FF8B90;font-size:12.5px;margin-top:10px;min-height:1em;}
 </style>
+
+<div id="gate">
+  <div class="box">
+    <h2>Özel portföy paneli</h2>
+    <p>Devam etmek için şifreni gir.</p>
+    <form id="gateForm" autocomplete="off">
+      <input type="password" id="gateInput" placeholder="şifre" autocomplete="off">
+      <button type="submit">Gir</button>
+      <div class="err" id="gateErr"></div>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+  var GATE_HASH = 'afca843f4940c746173065e443b8b63dd7132980c844689c57a7a59605a083ef';
+  var form = document.getElementById('gateForm');
+  var input = document.getElementById('gateInput');
+  var err = document.getElementById('gateErr');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var val = input.value;
+    if(!val || !window.crypto || !window.crypto.subtle){
+      err.textContent = 'Bu tarayıcı desteklemiyor.';
+      return;
+    }
+    crypto.subtle.digest('SHA-256', new TextEncoder().encode(val)).then(function(buf){
+      var hex = Array.prototype.map.call(new Uint8Array(buf), function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+      if(hex === GATE_HASH){
+        try{ localStorage.setItem('portfolioGateOK', '1'); }catch(e){}
+        document.documentElement.className = document.documentElement.className.replace(/\blocked\b/, '').trim();
+      } else {
+        err.textContent = 'Yanlış şifre.';
+        input.value = '';
+        input.focus();
+      }
+    });
+  });
+})();
+</script>
 
 <div class="page">
 
@@ -1885,13 +1960,13 @@
 
     var fullName = nameEl.textContent.trim();
     tickerEl.textContent = fullName;
-    nameEl.textContent = numTR(shares, 2) + ' ' + ticker;
 
     holdings.push({
       ticker: ticker,
       shares: shares,
       cost: cost,
       lastPrice: initPrice,
+      nameEl: nameEl,
       priceCell: priceCell, dayCell: dayCell, valueCell: valueCell, plCell: plCell, payCell: payCell
     });
   });
@@ -1901,11 +1976,14 @@
     var m = heroDelta24hEl ? heroDelta24hEl.textContent.match(/[+\-−]\$[\d.,]+/) : null;
     return m ? parseTRMoneySigned(m[0]) : 0;
   })();
+  renderAllHoldingRows();
+  renderHero();
 
   function renderHoldingRow(h){
     var value = h.shares * h.lastPrice;
     h.priceCell.textContent = fmtMoney(h.lastPrice);
     h.valueCell.textContent = fmtMoney(value);
+    if(h.nameEl) h.nameEl.textContent = numTR(h.shares, 2) + ' ' + h.ticker + ' · ' + fmtMoney(h.lastPrice) + '/hisse';
     var plAbs = value - h.cost;
     var plPct = plAbs / h.cost * 100;
     h.plCell.textContent = (plAbs < 0 ? '▼ ' : '▲ ') + fmtMoneySigned(plAbs) + ' (' + fmtPctSigned(plPct) + ')';
