@@ -304,6 +304,10 @@
   .update-status.err{color:var(--status-critical);}
   .update-status.ok{color:var(--status-good);}
   .update-note{font-size:11.5px;color:var(--ink-muted);margin-top:8px;margin-bottom:0;}
+  .update-manual{margin-top:10px;}
+  .update-manual summary{font-size:11.5px;color:var(--ink-muted);cursor:pointer;}
+  .update-manual summary:hover{color:var(--ink-primary);}
+  .update-manual .update-key-row{margin-top:8px;margin-bottom:0;}
   #themeToggle .icon-moon{display:none;}
   :root[data-theme="dark"] #themeToggle .icon-sun{display:none;}
   :root[data-theme="dark"] #themeToggle .icon-moon{display:block;}
@@ -530,18 +534,21 @@
         </button>
       </div>
       <div class="update-panel" id="updatePanel" hidden>
-        <div class="update-key-row">
-          <label for="finnhubKey">Finnhub API key:</label>
-          <input type="password" id="finnhubKey" placeholder="key'ini yapıştır" autocomplete="off" spellcheck="false">
-          <button type="button" id="saveKeyBtn">Kaydet</button>
-          <a href="https://finnhub.io/register" target="_blank" rel="noopener noreferrer">ücretsiz key al →</a>
-        </div>
         <button type="button" id="liveUpdateBtn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
           Şimdi canlı güncelle
         </button>
         <div class="update-status" id="updateStatus"><b>Son fiyat güncellemesi:</b> 21 Ağustos 2026 kapanışı, stockanalysis.com kaynaklı gerçek verilerle doğrulandı (24 Ağustos 2026'da yeniden teyit edildi).</div>
-        <p class="update-note">Fiyatlar Finnhub'dan tarayıcı üzerinden çekilir; API key sadece bu bilgisayarda (localStorage) saklanır. 7G/30G/Tümü grafikleri ve pozisyon bazlı "neden bu değişim" analizleri geçmiş veri gerektirdiği için canlı güncellemeyle değişmez — onlar için Claude'a <b>"portföyümü güncelle"</b> yazabilirsin.</p>
+        <p class="update-note">Fiyatlar arka planda otomatik çekilir (her 10 dakikada bir) — key girmene gerek yok. 7G/30G/Tümü grafikleri ve pozisyon bazlı "neden bu değişim" analizleri geçmiş veri gerektirdiği için canlı güncellemeyle değişmez — onlar için Claude'a <b>"portföyümü güncelle"</b> yazabilirsin.</p>
+        <details class="update-manual">
+          <summary>Gelişmiş: kendi Finnhub key'inle manuel güncelle</summary>
+          <div class="update-key-row">
+            <label for="finnhubKey">Finnhub API key:</label>
+            <input type="password" id="finnhubKey" placeholder="key'ini yapıştır" autocomplete="off" spellcheck="false">
+            <button type="button" id="saveKeyBtn">Kaydet</button>
+            <a href="https://finnhub.io/register" target="_blank" rel="noopener noreferrer">ücretsiz key al →</a>
+          </div>
+        </details>
       </div>
     </div>
   </header>
@@ -1936,6 +1943,59 @@
     if(maliyetEl) maliyetEl.textContent = fmtMoney(totalCost);
   }
 
+  function applyQuotes(quotesByTicker){
+    var failed = [];
+    var total24hDelta = 0;
+    holdings.forEach(function(h){
+      var q = quotesByTicker[h.ticker];
+      if(!q || !q.c){ failed.push(h.ticker); return; }
+      var c = q.c;
+      var pc = q.pc || c;
+      var dayPct = pc ? (c - pc) / pc * 100 : 0;
+      h.dayCell.textContent = fmtPctSigned(dayPct);
+      h.dayCell.className = 'num ' + (dayPct < 0 ? 'critical' : 'good');
+      total24hDelta += h.shares * (c - pc);
+      h.lastPrice = c;
+    });
+    renderAllHoldingRows();
+    lastKnownTotalUSD = holdings.reduce(function(sum, h){ return sum + h.shares * h.lastPrice; }, 0);
+    lastKnown24hDeltaUSD = total24hDelta;
+    renderHero();
+    return failed;
+  }
+
+  /* primary path: read prices.json, generated every 10 minutes by a GitHub
+     Actions workflow that holds the Finnhub key as a repo secret — the
+     browser never needs a key at all. Falls back to the manual Finnhub-key
+     flow below only when this isn't available (e.g. opened from a local
+     file, where same-origin fetch of a sibling file is blocked). */
+  function performJsonUpdate(){
+    return fetch('./prices.json', {cache: 'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error('no prices.json'); return r.json(); })
+      .then(function(data){
+        if(!data || !data.quotes) throw new Error('bad prices.json');
+        var failed = applyQuotes(data.quotes);
+        var stamp = data.updatedAt
+          ? new Date(data.updatedAt).toLocaleString('tr-TR', {day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit'})
+          : '';
+        if(failed.length){
+          setStatus('<b>Son güncelleme:</b> ' + stamp + ' — otomatik. ' + failed.length + ' pozisyon eksik (' + failed.join(', ') + ').', 'err');
+          setLiveBadge('err', failed.length + ' pozisyon eski');
+        } else {
+          setStatus('<b>Son güncelleme:</b> ' + stamp + ' — otomatik olarak güncellendi (her 10 dakikada bir yenilenir).', 'ok');
+          setLiveBadge('live', 'canlı');
+        }
+      });
+  }
+
+  function autoUpdateCycle(){
+    performJsonUpdate().catch(function(){
+      var hasKey = false;
+      try{ hasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
+      if(hasKey) performLiveUpdate();
+    });
+  }
+
   function performLiveUpdate(){
     var key = '';
     try{ key = (localStorage.getItem(KEY_STORAGE) || '').trim(); }catch(e){}
@@ -2165,38 +2225,26 @@
     });
   }
   if(liveUpdateBtn){
-    liveUpdateBtn.addEventListener('click', performLiveUpdate);
+    liveUpdateBtn.addEventListener('click', autoUpdateCycle);
   }
   if(updateBtn && updatePanel){
     updateBtn.addEventListener('click', function(){
       updatePanel.hidden = !updatePanel.hidden;
-      var hasKey = false;
-      try{ hasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
-      if(!updatePanel.hidden && hasKey){
-        performLiveUpdate();
-      }
+      if(!updatePanel.hidden) autoUpdateCycle();
     });
   }
 
-  /* stay current: refresh automatically on load and every 5 minutes while the
-     tab is open (only when a Finnhub key is saved — no key, no calls) */
+  /* stay current, zero setup: try prices.json (auto-refreshed server-side
+     every 10 minutes) on load, every 5 minutes while the tab is open, and
+     whenever the tab/phone screen comes back into view. Falls back to a
+     saved Finnhub key only if prices.json isn't reachable. */
   var AUTO_REFRESH_MS = 5 * 60 * 1000;
-  (function autoRefresh(){
-    var hasKey = false;
-    try{ hasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
-    if(!hasKey) return;
-    performLiveUpdate();
-    setInterval(function(){
-      var stillHasKey = false;
-      try{ stillHasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
-      if(stillHasKey && !document.hidden) performLiveUpdate();
-    }, AUTO_REFRESH_MS);
-  })();
+  autoUpdateCycle();
+  setInterval(function(){
+    if(!document.hidden) autoUpdateCycle();
+  }, AUTO_REFRESH_MS);
   document.addEventListener('visibilitychange', function(){
-    if(document.hidden) return;
-    var hasKey = false;
-    try{ hasKey = !!localStorage.getItem(KEY_STORAGE); }catch(e){}
-    if(hasKey) performLiveUpdate();
+    if(!document.hidden) autoUpdateCycle();
   });
 
   var themeBtn = document.getElementById('themeToggle');
