@@ -694,10 +694,10 @@
         <span class="period-pill good" id="periodPill">▲ +$1.236,19 (+%14,60)</span>
       </div>
       <div class="range-tabs" role="tablist" aria-label="Zaman aralığı">
-        <button type="button" data-panel="p24h" data-pill="−$34,14 (−%0,35)" data-sign="critical">24S</button>
-        <button type="button" data-panel="p7d" data-pill="−$191,56 (−%1,94)" data-sign="critical">7G</button>
-        <button type="button" data-panel="p30d" data-pill="+$1.236,19 (+%14,60)" data-sign="good" class="active">30G</button>
-        <button type="button" data-panel="pall" data-pill="−$1.148,42 (−%10,58)" data-sign="critical">Tümü</button>
+        <button type="button" data-panel="p24h" data-pill="−$34,14 (−%0,35)" data-sign="critical" data-label="Son 24 Saat">24S</button>
+        <button type="button" data-panel="p7d" data-pill="−$191,56 (−%1,94)" data-sign="critical" data-label="Son 7 Gün">7G</button>
+        <button type="button" data-panel="p30d" data-pill="+$1.236,19 (+%14,60)" data-sign="good" class="active" data-label="Son 30 Gün">30G</button>
+        <button type="button" data-panel="pall" data-pill="−$1.148,42 (−%10,58)" data-sign="critical" data-label="Başlangıçtan Bu Yana">Tümü</button>
       </div>
 
       <div class="chart-panel hero-panel" id="p24h">
@@ -1922,6 +1922,21 @@
       pill.className = 'period-pill';
     }
   }
+  function renderHeroRangeDelta(btn){
+    if(!heroDelta24hEl || !btn) return;
+    var label = btn.getAttribute('data-label') || 'Son 24 Saat';
+    if(btn.getAttribute('data-panel') === 'p24h'){
+      var prevTotal = lastKnownTotalUSD - lastKnown24hDeltaUSD;
+      updatePill(heroDelta24hEl, label, lastKnown24hDeltaUSD, prevTotal ? lastKnown24hDeltaUSD / prevTotal * 100 : 0);
+      return;
+    }
+    var pillText = btn.getAttribute('data-pill');
+    var sign = btn.getAttribute('data-sign');
+    if(!pillText) return;
+    heroDelta24hEl.className = 'pill ' + sign;
+    heroDelta24hEl.innerHTML = (sign === 'good' ? '▲' : '▼') + ' ' + label + ': ' +
+      convertPillText(pillText).replace(/\(([^)]+)\)\s*$/, '<span class="plain-label">($1)</span>');
+  }
   tabs.forEach(function(btn){
     btn.addEventListener('click', function(){
       tabs.forEach(function(b){ b.classList.remove('active'); });
@@ -1930,6 +1945,7 @@
       var target = document.getElementById(btn.getAttribute('data-panel'));
       if(target) target.classList.add('active');
       renderRangePill(btn);
+      renderHeroRangeDelta(btn);
     });
   });
 
@@ -2074,10 +2090,7 @@
   function renderHero(){
     if(heroValueEl) heroValueEl.textContent = fmtMoney(lastKnownTotalUSD);
     if(heroDeltaCostEl) updatePill(heroDeltaCostEl, 'Maliyete göre', lastKnownTotalUSD - totalCost, totalCost ? (lastKnownTotalUSD - totalCost) / totalCost * 100 : 0);
-    if(heroDelta24hEl){
-      var prevTotal = lastKnownTotalUSD - lastKnown24hDeltaUSD;
-      updatePill(heroDelta24hEl, 'Son 24 Saat', lastKnown24hDeltaUSD, prevTotal ? lastKnown24hDeltaUSD / prevTotal * 100 : 0);
-    }
+    renderHeroRangeDelta(document.querySelector('.range-tabs button.active'));
     var maliyetEl = document.querySelector('.hero-stats-strip .stat:nth-child(1) .v');
     if(maliyetEl) maliyetEl.textContent = fmtMoney(totalCost);
   }
