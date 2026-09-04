@@ -12,7 +12,7 @@
     if(!already && urlKey && window.crypto && window.crypto.subtle){
       crypto.subtle.digest('SHA-256', new TextEncoder().encode(urlKey)).then(function(buf){
         var hex = Array.prototype.map.call(new Uint8Array(buf), function(b){ return b.toString(16).padStart(2,'0'); }).join('');
-        if(hex === '85d6385b945c0d602103db39b0b654b2af93b5127938e26a959c123f0789b948'){
+        if(hex === 'b7c3dcf3bb9a9eeefec921a03819e07c9bad0ce8dd371e530261c03cf7150869'){
           try{ localStorage.setItem('portfolioGateOK','1'); }catch(e){}
           document.documentElement.className = document.documentElement.className.replace(/\blocked\b/, '').trim();
         }
@@ -594,7 +594,7 @@
 </div>
 <script>
 (function(){
-  var GATE_HASH = '85d6385b945c0d602103db39b0b654b2af93b5127938e26a959c123f0789b948';
+  var GATE_HASH = 'b7c3dcf3bb9a9eeefec921a03819e07c9bad0ce8dd371e530261c03cf7150869';
   var form = document.getElementById('gateForm');
   var input = document.getElementById('gateInput');
   var err = document.getElementById('gateErr');
