@@ -1,28 +1,28 @@
 {
-  "date": "4 Eylül 2026",
-  "outlook": "olumlu",
-  "outlookLabel": "Portföyde Güçlü Toparlanma, Makro Riskler Sürüyor",
-  "summary": "Dokuz pozisyonun sekizi bir günde değer kazandı; kripto madencileri RIOT ve CLSK öne çıktı. Hafta başındaki ABD-İran gerilimiyle gelen satış dalgasından sonra risk iştahı kısmen geri döndü, ancak 16 Eylül'deki Fed toplantısı ve jeopolitik risk gündemde kalmaya devam ediyor.",
+  "date": "5 Eylül 2026",
+  "outlook": "notr",
+  "outlookLabel": "Karışık Seyir, Gözler Fed Toplantısında",
+  "summary": "Bugün portföyde net bir yön yoktu; nükleer yakıt hissesi LEU ve yazılım devi PLTR yükselirken kripto madencileri RIOT ve CLSK sert geriledi. Önümüzdeki günlerde 15-16 Eylül'deki Fed toplantısı ve yapay zekaya yapılan devasa harcamaların sürdürülebilirliği tartışması gündemde kalmaya devam edecek.",
   "sections": [
     {
-      "title": "Bugün portföyde güçlü ve yaygın bir yükseliş vardı",
-      "body": "Dokuz pozisyonun sekizi değer kazandı: kripto madenciliği hisseleri RIOT (+%13,4) ve CLSK (+%11,0) en sert yükselenler oldu, onları PLTR (+%7,7), NOW (+%6,5), ORCL (+%5,7) ve IREN (+%5,2) izledi. Sadece LEU hafif geriledi (-%0,6). Bu toparlanma, hafta başında ABD'nin İran'a yönelik hava saldırılarıyla tetiklenen küresel satış dalgasından sonra risk iştahının kısmen geri döndüğünü gösteriyor."
+      "title": "Bugün portföyde kazananlar ve kaybedenler birbirini dengeledi",
+      "body": "Dokuz hisseden dördü günü kazançla kapattı, beşi kayıpla: en çok yükselen LEU (+%5,75) ve PLTR (+%3,44) oldu, ORCL da +%3,10 ile onları izledi. En çok gerileyen ise RIOT (-%5,48) ve CLSK (-%4,92) oldu — ikisi de kripto madenciliği temalı hisseler; IREN (-%1,69), CRWV (-%2,13) ve NOW (-%0,98) da hafif kayıpla kapattı. Kazananlar ve kaybedenler büyük ölçüde birbirini dengeleyince portföyün toplam değeri bugün neredeyse yatay kaldı."
     },
     {
-      "title": "Kripto madenciliğinde zorlu ama dönüşen bir tablo",
-      "body": "Bitcoin madenciliğinde birim güç başına kazanç (hashprice — madencilerin donanımlarından ne kadar kazandığını gösteren ölçü) 2026'nın en düşük seviyelerinde seyrediyor ve madencilik zorluğu yıl başından bu yana yaklaşık %15 geriledi; yani saf madencilik işi giderek daha az kârlı hale geliyor. Bu yüzden RIOT, CLSK ve IREN hızla yapay zeka veri merkezi kiralamacılığına kayıyor; sektör genelinde büyük teknoloji şirketleriyle imzalanan bu tür anlaşmaların toplam değeri 70 milyar doları aştı — RIOT'un Anthropic ile imzaladığı 9,1 milyar dolarlık 20 yıllık anlaşma bu dönüşümün en büyük örneği."
+      "title": "Kripto madenciliği hisseleri hâlâ oynak, sektör AI'a kayıyor",
+      "body": "Bitcoin bu hafta 80.000 doların üzerine çıkarak son üç ayın zirvesini gördü ve bu genel olarak madenci hisselerine destek verdi, ancak portföydeki RIOT ve CLSK bugün tam tersi yönde sert geriledi — muhtemelen önceki günlerdeki hızlı yükselişin (RIOT bu hafta bir günde %11,6 yükselmişti) ardından kâr satışı yaşandı. Sektördeki asıl büyük değişim şu: madenciler artık bilgisayar güçlerini bitcoin yerine yapay zeka şirketlerine kiralamaya yöneliyor. Bir analist raporuna göre portföyün en büyük pozisyonu olan IREN, zamanla bitcoin madenciliğini tamamen bırakıp bu kapasiteyi AI şirketlerine ayırabilir."
     },
     {
-      "title": "Yazılım ve bulut tarafında karışık ama çoğunlukla olumlu sinyaller",
-      "body": "Palantir (PLTR), salı günü kâr satışıyla %6 gerilemişti ama toparlandı; ABD Ordusu'ndan yeni bir kontrat aldı ve eski AIG CEO'su Peter Zaffino'yu üst düzey yönetime kattı. Yine de hissenin fiyat/kazanç oranı (hissenin kârının kaç katına işlem gördüğünü gösteren oran) 145 gibi çok yüksek bir seviyede — piyasa gelecekteki büyümeyi şimdiden fiyatlıyor, bu da hayal kırıklığı riskini artırıyor. ServiceNow (NOW) son bir ayda %28 yükseldi ve Bank of America hedef fiyatını 150 dolara çıkardı. CoreWeave (CRWV) çeyreklik gelirini %112 artırdı, sipariş defteri 104 milyar dolara ulaştı ve Truist hedef fiyatını yükseltti. Oracle (ORCL) ise yılbaşından bu yana hâlâ %25 değer kaybetmiş durumda — AB'nin bulut lisanslama soruşturması ve şirketin serbest nakit akışının (elde kalan gerçek nakit) negatife dönmesi baskı yaratmaya devam ediyor."
+      "title": "Yazılım ve bulut tarafında şirket haberleri karışık sinyaller verdi",
+      "body": "Palantir (PLTR), PwC ile genişletilen iş birliği ve ABD Ordusu'ndan aldığı yeni bir kontrat haberiyle bugün %3,44 yükseldi; ama hissenin fiyatı şirketin yıllık kârının yaklaşık 150 katına işlem görüyor (yazılım sektörü ortalaması ~40 kat) — bu, piyasanın gelecekteki büyümeyi şimdiden fiyatladığı, dolayısıyla küçük bir hayal kırıklığında sert düşebileceği anlamına geliyor. Oracle (ORCL) bugün %3,10 yükseldi; Citi gibi bazı analistler önümüzdeki aylarda güçlü bir toparlanma beklerken Jefferies hedef fiyatını düşürdü — şirketin serbest nakit akışı (yani elde kalan gerçek nakit) hâlâ derin negatif. CoreWeave (CRWV) güçlü büyümesine (gelir yıllık %112 arttı, sipariş defteri 104 milyar dolara çıktı) rağmen bugün %2,13 geriledi; yatırımcılar hâlâ şirketin yüksek borcunu ve faiz yükünü sorguluyor."
     },
     {
-      "title": "İzlenmesi gereken riskler: Fed, İran ve 'AI balonu' endişesi",
-      "body": "16 Eylül'deki Fed toplantısı önemli bir dönüm noktası: piyasa artık faiz indirimini değil, enflasyon endişeleri ve İran'la gerilim nedeniyle bir faiz artırımı ihtimalini fiyatlıyor — bu büyüme hisseleri için olumsuz bir sürpriz olabilir. ABD'nin İran'a yönelik yeni hava saldırıları petrol fiyatlarını haftalar sonrasının zirvesine taşıdı; Hürmüz Boğazı'ndaki gerilim tırmanırsa küresel piyasalarda yeni bir satış dalgası tetiklenebilir. Ayrıca büyük teknoloji şirketlerinin 2026'da yapay zekaya ayırdığı yaklaşık 725 milyar dolarlık dev harcama karşısında henüz yeterli gelir üretilemediği yönündeki endişeler ('AI balonu' tartışması) sürüyor — tanınmış yatırımcı David Tepper'in geçtiğimiz günlerde elindeki tüm SanDisk (SNDK) hissesini sattığı haberi de bu temkinli havayı besliyor."
+      "title": "Depolama ve nükleer yakıtta farklı hikayeler",
+      "body": "SanDisk (SNDK) bugün hafif geriledi (-%0,28) ve son bir haftada yaklaşık %7 değer kaybetti — bu, yılbaşından bu yana %550'nin üzerinde yükselen bir hissede beklenen bir soluklanma; bellek çipi (NAND) kıtlığı teması hâlâ sağlam duruyor ve bazı analistler çok daha yüksek hedef fiyatlar veriyor. Centrus Energy (LEU) ise bugün %5,75 yükseldi; Kore ve ABD'li nükleer şirketleriyle yapılan yeni tesis genişletme anlaşmaları ve güçlü analist desteğiyle (neredeyse tüm analistler 'Al' diyor) portföydeki en istikrarlı yükselen pozisyonlardan biri olmayı sürdürüyor."
     },
     {
-      "title": "Sizin için ne anlama geliyor",
-      "body": "Bugünkü güçlü yükseliş sevindirici ama tek bir günün trendi değiştirdiği anlamına gelmiyor — portföyünüz tamamen AI altyapısı ve kripto madenciliği temasına bağlı olduğu için piyasa genelinden çok daha oynak hareket ediyor. Kısa vadede en çok izlemeniz gerekenler: 16 Eylül'deki Fed kararı, ABD-İran gerilimindeki gelişmeler ve Oracle'daki AB soruşturma süreci. Tek günlük hareketlere göre pozisyon değiştirmek yerine bu başlıklardaki gelişmeleri takip etmek daha faydalı olacaktır."
+      "title": "İzlenmesi gereken riskler ve sizin için ne anlama geliyor",
+      "body": "Önümüzdeki en önemli tarih 15-16 Eylül'deki Fed (ABD Merkez Bankası) toplantısı: piyasa şu an faizlerin sabit kalmasını bekliyor, ama Fed Başkanı'nın son açıklamaları bir faiz artırımı ihtimalini artırdı — böyle bir artırım büyüme odaklı teknoloji hisselerini, yani portföyünüzün neredeyse tamamını, olumsuz etkiler. Ayrıca büyük teknoloji şirketlerinin yapay zekaya ayırdığı devasa harcamaların (2026'da yaklaşık 725 milyar dolar) henüz yeterli getiriyi sağlayıp sağlamadığına dair artan bir tartışma var; bu şirketlerden bazılarının elinde kalan nakit hızla azalıyor. Portföyünüz tek bir temaya (AI altyapısı ve kripto madenciliği) bağlı olduğu için böyle günlük iniş çıkışlar normal — bugünkü gibi karışık bir günde tek tek hisse hareketlerine göre acele karar vermek yerine, Fed toplantısını ve AI harcama haberlerini takip etmek daha faydalı olur."
     }
   ]
 }
