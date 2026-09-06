@@ -1,28 +1,28 @@
 {
-  "date": "5 Eylül 2026",
+  "date": "6 Eylül 2026",
   "outlook": "notr",
-  "outlookLabel": "Karışık Seyir, Gözler Fed Toplantısında",
-  "summary": "Bugün portföyde net bir yön yoktu; nükleer yakıt hissesi LEU ve yazılım devi PLTR yükselirken kripto madencileri RIOT ve CLSK sert geriledi. Önümüzdeki günlerde 15-16 Eylül'deki Fed toplantısı ve yapay zekaya yapılan devasa harcamaların sürdürülebilirliği tartışması gündemde kalmaya devam edecek.",
+  "outlookLabel": "Karışık Tablo, Fed ve Oracle Bilançosu Öne Çıkıyor",
+  "summary": "Bu hafta bitcoin toparlanması RIOT'u ve kripto madenciliği temasını desteklerken, SanDisk ve Centrus Energy de güçlü haberlerle öne çıktı; ama 15-16 Eylül'deki Fed toplantısı ve 9 Eylül'deki Oracle bilançosu önümüzdeki günlerde portföyün yönünü belirleyecek en kritik gelişmeler olacak.",
   "sections": [
     {
-      "title": "Bugün portföyde kazananlar ve kaybedenler birbirini dengeledi",
-      "body": "Dokuz hisseden dördü günü kazançla kapattı, beşi kayıpla: en çok yükselen LEU (+%5,75) ve PLTR (+%3,44) oldu, ORCL da +%3,10 ile onları izledi. En çok gerileyen ise RIOT (-%5,48) ve CLSK (-%4,92) oldu — ikisi de kripto madenciliği temalı hisseler; IREN (-%1,69), CRWV (-%2,13) ve NOW (-%0,98) da hafif kayıpla kapattı. Kazananlar ve kaybedenler büyük ölçüde birbirini dengeleyince portföyün toplam değeri bugün neredeyse yatay kaldı."
+      "title": "Bitcoin üç haftadır yükseliyor, kripto madencisi hisseleri hareketlendi",
+      "body": "Bitcoin bu hafta yaklaşık %5 değer kazanarak 80.000 doların üzerine çıktı ve mayıs ortasından bu yana gördüğü en yüksek seviyeye (82.272 dolar) ulaştı. Bu yükseliş özellikle portföydeki RIOT hissesine yaradı: RIOT bir günde %11,6 birden sıçradı ve yakın zamanda yapay zeka şirketi Anthropic ile imzaladığı 9,1 milyar dolarlık, 20 yıllık veri merkezi kiralama anlaşması sektörde örnek gösteriliyor — yedi ay önce sıfır olan kiralık kapasitesi şimdi 241 megavata çıktı. Yine de RIOT hâlâ portföyün en küçük pozisyonu (%4,1 ağırlık) ve maliyetine göre yaklaşık %20,7 zararda; CLSK ise benzer büyüklükte bir AI kiralama anlaşmasına henüz sahip değil."
     },
     {
-      "title": "Kripto madenciliği hisseleri hâlâ oynak, sektör AI'a kayıyor",
-      "body": "Bitcoin bu hafta 80.000 doların üzerine çıkarak son üç ayın zirvesini gördü ve bu genel olarak madenci hisselerine destek verdi, ancak portföydeki RIOT ve CLSK bugün tam tersi yönde sert geriledi — muhtemelen önceki günlerdeki hızlı yükselişin (RIOT bu hafta bir günde %11,6 yükselmişti) ardından kâr satışı yaşandı. Sektördeki asıl büyük değişim şu: madenciler artık bilgisayar güçlerini bitcoin yerine yapay zeka şirketlerine kiralamaya yöneliyor. Bir analist raporuna göre portföyün en büyük pozisyonu olan IREN, zamanla bitcoin madenciliğini tamamen bırakıp bu kapasiteyi AI şirketlerine ayırabilir."
+      "title": "AI bulut ve yazılım tarafında hikaye ayrışıyor",
+      "body": "CoreWeave (CRWV) bu hafta güçlü seyretti; Truist hedef fiyatını 165 dolara, Goldman Sachs ise 139 dolara yükseltti ve şirketin ileride tahsil edeceği kontrat tutarı (sipariş defteri) 104 milyar dolara ulaştı. Palantir (PLTR) ise PwC ile genişletilen anlaşma ve ABD Ordusu'ndan yeni bir kontrat gibi olumlu haberlere rağmen geçtiğimiz günlerde kâr satışıyla geriledi; hisse hâlâ yıllık kârının 144 katının üzerinde bir fiyattan işlem görüyor (yazılım sektörü ortalaması ~40 kat), bu da küçük bir hayal kırıklığında sert düşüş riskini artırıyor. Oracle (ORCL) ise yılbaşından bu yana yaklaşık %25 değer kaybetmiş durumda; lisanslama uygulamaları AB'de antitröst incelemesi altında ve 9 Eylül'de açıklanacak çeyrek bilançosu öncesi analistler ikiye bölünmüş durumda (Jefferies hedef fiyatını düşürürken Citi yükseltti)."
     },
     {
-      "title": "Yazılım ve bulut tarafında şirket haberleri karışık sinyaller verdi",
-      "body": "Palantir (PLTR), PwC ile genişletilen iş birliği ve ABD Ordusu'ndan aldığı yeni bir kontrat haberiyle bugün %3,44 yükseldi; ama hissenin fiyatı şirketin yıllık kârının yaklaşık 150 katına işlem görüyor (yazılım sektörü ortalaması ~40 kat) — bu, piyasanın gelecekteki büyümeyi şimdiden fiyatladığı, dolayısıyla küçük bir hayal kırıklığında sert düşebileceği anlamına geliyor. Oracle (ORCL) bugün %3,10 yükseldi; Citi gibi bazı analistler önümüzdeki aylarda güçlü bir toparlanma beklerken Jefferies hedef fiyatını düşürdü — şirketin serbest nakit akışı (yani elde kalan gerçek nakit) hâlâ derin negatif. CoreWeave (CRWV) güçlü büyümesine (gelir yıllık %112 arttı, sipariş defteri 104 milyar dolara çıktı) rağmen bugün %2,13 geriledi; yatırımcılar hâlâ şirketin yüksek borcunu ve faiz yükünü sorguluyor."
+      "title": "Depolama ve nükleer yakıtta güçlü hafta",
+      "body": "SanDisk (SNDK) bellek çipi (NAND) kıtlığı temasıyla bu hafta yeniden güçlü yükseldi ve 21 Eylül'de S&P 100 endeksine dahil edilmesi bekleniyor — bu genellikle büyük fonların hisseyi almasını teşvik eden olumlu bir gelişme. Şirket ayrıca 14 milyar dolarlık hisse geri alım programı başlattı. Centrus Energy (LEU) tarafında da tablo olumlu: takip eden analistlerin neredeyse tamamı 'Al' tavsiyesi veriyor ve geçen çeyrekte gelir, beklentilerin belirgin üzerinde geldi (176,1 milyon dolar, beklenti 148,8 milyon dolardı)."
     },
     {
-      "title": "Depolama ve nükleer yakıtta farklı hikayeler",
-      "body": "SanDisk (SNDK) bugün hafif geriledi (-%0,28) ve son bir haftada yaklaşık %7 değer kaybetti — bu, yılbaşından bu yana %550'nin üzerinde yükselen bir hissede beklenen bir soluklanma; bellek çipi (NAND) kıtlığı teması hâlâ sağlam duruyor ve bazı analistler çok daha yüksek hedef fiyatlar veriyor. Centrus Energy (LEU) ise bugün %5,75 yükseldi; Kore ve ABD'li nükleer şirketleriyle yapılan yeni tesis genişletme anlaşmaları ve güçlü analist desteğiyle (neredeyse tüm analistler 'Al' diyor) portföydeki en istikrarlı yükselen pozisyonlardan biri olmayı sürdürüyor."
+      "title": "Önümüzdeki hafta iki büyük gündem maddesi var",
+      "body": "15-16 Eylül'deki Fed (ABD Merkez Bankası) toplantısı en kritik risk: bazı büyük yatırım kuruluşları artık faizlerin sabit kalması yerine küçük bir artış beklediklerini söylüyor — bunun nedeni Ortadoğu'daki çatışmanın enerji fiyatlarını yukarı itmesi. Bir faiz artırımı, portföyünüzdeki büyüme odaklı teknoloji hisselerinin neredeyse tamamını olumsuz etkiler. İkinci önemli tarih ise 9 Eylül'de açıklanacak Oracle bilançosu — portföydeki en kötü performans olan bu hisse için hem yukarı hem aşağı sürpriz potansiyeli var. Ayrıca büyük teknoloji şirketlerinin 2026'da yapay zekaya ayırdığı devasa harcama (yaklaşık 635-690 milyar dolar) hâlâ tartışma konusu ve bazı analistler bu tempoyu sürdürülebilir bulmuyor."
     },
     {
-      "title": "İzlenmesi gereken riskler ve sizin için ne anlama geliyor",
-      "body": "Önümüzdeki en önemli tarih 15-16 Eylül'deki Fed (ABD Merkez Bankası) toplantısı: piyasa şu an faizlerin sabit kalmasını bekliyor, ama Fed Başkanı'nın son açıklamaları bir faiz artırımı ihtimalini artırdı — böyle bir artırım büyüme odaklı teknoloji hisselerini, yani portföyünüzün neredeyse tamamını, olumsuz etkiler. Ayrıca büyük teknoloji şirketlerinin yapay zekaya ayırdığı devasa harcamaların (2026'da yaklaşık 725 milyar dolar) henüz yeterli getiriyi sağlayıp sağlamadığına dair artan bir tartışma var; bu şirketlerden bazılarının elinde kalan nakit hızla azalıyor. Portföyünüz tek bir temaya (AI altyapısı ve kripto madenciliği) bağlı olduğu için böyle günlük iniş çıkışlar normal — bugünkü gibi karışık bir günde tek tek hisse hareketlerine göre acele karar vermek yerine, Fed toplantısını ve AI harcama haberlerini takip etmek daha faydalı olur."
+      "title": "Sizin için ne anlama geliyor",
+      "body": "Bu hafta kripto madenciliği, depolama ve nükleer yakıt tarafında olumlu haberler ağırlıktaydı, ama önümüzdeki iki hafta (Fed toplantısı ve Oracle bilançosu) portföyün asıl yönünü belirleyecek gerçek testler olacak. Dokuz pozisyonun tamamı tek bir temaya (AI altyapısı ve kripto madenciliği) bağlı olduğu için, bu iki gelişme öncesinde acele alım-satım kararı vermek yerine sakin kalıp haberleri takip etmek daha mantıklı olur."
     }
   ]
 }
