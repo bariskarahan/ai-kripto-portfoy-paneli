@@ -1,28 +1,28 @@
 {
-  "date": "6 Eylül 2026",
+  "date": "7 Eylül 2026",
   "outlook": "notr",
-  "outlookLabel": "Karışık Tablo, Fed ve Oracle Bilançosu Öne Çıkıyor",
-  "summary": "Bu hafta bitcoin toparlanması RIOT'u ve kripto madenciliği temasını desteklerken, SanDisk ve Centrus Energy de güçlü haberlerle öne çıktı; ama 15-16 Eylül'deki Fed toplantısı ve 9 Eylül'deki Oracle bilançosu önümüzdeki günlerde portföyün yönünü belirleyecek en kritik gelişmeler olacak.",
+  "outlookLabel": "Kripto ve Depolamada Güç, Yazılım Tarafında Endişe — Önümüzde İki Kritik Sınav",
+  "summary": "Bitcoin ve kripto madenciliği hisseleri güçlü kalmaya devam ederken, Oracle'ın borç riskine dair endişeler rekor seviyeye çıktı ve ServiceNow işten çıkarma haberiyle zayıf seyretti; 10 Eylül'deki Oracle bilançosu ve 15-16 Eylül'deki Fed toplantısı önümüzdeki günlerin en kritik gündem maddeleri.",
   "sections": [
     {
-      "title": "Bitcoin üç haftadır yükseliyor, kripto madencisi hisseleri hareketlendi",
-      "body": "Bitcoin bu hafta yaklaşık %5 değer kazanarak 80.000 doların üzerine çıktı ve mayıs ortasından bu yana gördüğü en yüksek seviyeye (82.272 dolar) ulaştı. Bu yükseliş özellikle portföydeki RIOT hissesine yaradı: RIOT bir günde %11,6 birden sıçradı ve yakın zamanda yapay zeka şirketi Anthropic ile imzaladığı 9,1 milyar dolarlık, 20 yıllık veri merkezi kiralama anlaşması sektörde örnek gösteriliyor — yedi ay önce sıfır olan kiralık kapasitesi şimdi 241 megavata çıktı. Yine de RIOT hâlâ portföyün en küçük pozisyonu (%4,1 ağırlık) ve maliyetine göre yaklaşık %20,7 zararda; CLSK ise benzer büyüklükte bir AI kiralama anlaşmasına henüz sahip değil."
+      "title": "Kripto madenciliği tarafı hâlâ güçlü",
+      "body": "Bitcoin bu hafta 80.000 doların hemen altında/üzerinde seyrederek son haftaların kazanımlarını korudu. RIOT geçen hafta bir günde %11,6 sıçradı; hisse için 20 analistin tamamı 'Al' tavsiyesi veriyor. IREN tarafında ise Bernstein, şirketin 2029'a kadar büyüyecek veri merkezi kapasitesine dayanarak hissede %144'e varan yükseliş potansiyeli görebileceğini açıkladı — IREN halihazırda portföyün en büyük pozisyonu (%20,3 pay). CLSK ise bitcoin madenciliğinden yapay zekâ/veri merkezi kiralamasına geçiş stratejisini sürdürüyor, ancak henüz RIOT veya IREN büyüklüğünde bir kiralama anlaşması duyurmadı."
     },
     {
-      "title": "AI bulut ve yazılım tarafında hikaye ayrışıyor",
-      "body": "CoreWeave (CRWV) bu hafta güçlü seyretti; Truist hedef fiyatını 165 dolara, Goldman Sachs ise 139 dolara yükseltti ve şirketin ileride tahsil edeceği kontrat tutarı (sipariş defteri) 104 milyar dolara ulaştı. Palantir (PLTR) ise PwC ile genişletilen anlaşma ve ABD Ordusu'ndan yeni bir kontrat gibi olumlu haberlere rağmen geçtiğimiz günlerde kâr satışıyla geriledi; hisse hâlâ yıllık kârının 144 katının üzerinde bir fiyattan işlem görüyor (yazılım sektörü ortalaması ~40 kat), bu da küçük bir hayal kırıklığında sert düşüş riskini artırıyor. Oracle (ORCL) ise yılbaşından bu yana yaklaşık %25 değer kaybetmiş durumda; lisanslama uygulamaları AB'de antitröst incelemesi altında ve 9 Eylül'de açıklanacak çeyrek bilançosu öncesi analistler ikiye bölünmüş durumda (Jefferies hedef fiyatını düşürürken Citi yükseltti)."
+      "title": "AI yazılım ve bulut tarafında tablo karışık",
+      "body": "CoreWeave (CRWV) güçlü bir çeyrek geçirdi: gelir bir önceki yıla göre ikiye katlanarak 2,58 milyar dolara çıktı ve ileride tahsil edilecek sözleşme tutarı (sipariş defteri/backlog) 104 milyar dolara ulaştı. Palantir (PLTR) tarafında PwC ile genişletilen anlaşma ve ABD Ordusu'ndan yeni bir kontrat hisseyi bir ara %8 yukarı taşıdı, ama kâr satışları ve ünlü yatırımcı Michael Burry'nin yeniden dile getirdiği 'hisse çok pahalı' eleştirisiyle (kazancının ~154 katı fiyattan işlem görüyor, yazılım sektörü ortalaması ~40 kat) geri çekildi. ServiceNow (NOW) ise en zayıf halka: iki ofiste yaklaşık 300 kişilik işten çıkarma duyurdu ve analistler hisse için hedef değeri 179 dolardan 145 dolara indirdi; hisse son bir yılda yaklaşık %23 değer kaybetti."
     },
     {
-      "title": "Depolama ve nükleer yakıtta güçlü hafta",
-      "body": "SanDisk (SNDK) bellek çipi (NAND) kıtlığı temasıyla bu hafta yeniden güçlü yükseldi ve 21 Eylül'de S&P 100 endeksine dahil edilmesi bekleniyor — bu genellikle büyük fonların hisseyi almasını teşvik eden olumlu bir gelişme. Şirket ayrıca 14 milyar dolarlık hisse geri alım programı başlattı. Centrus Energy (LEU) tarafında da tablo olumlu: takip eden analistlerin neredeyse tamamı 'Al' tavsiyesi veriyor ve geçen çeyrekte gelir, beklentilerin belirgin üzerinde geldi (176,1 milyon dolar, beklenti 148,8 milyon dolardı)."
+      "title": "Oracle'da borç endişesi rekor seviyede — bilanço 10 Eylül'de",
+      "body": "Oracle'ın borcunu sigortalamanın maliyeti (kredi risk sigortası, teknik adıyla CDS) son yıllardaki en yüksek seviyesine çıktı — Nvidia ve Meta gibi şirketlerle karşılaştırıldığında kat kat pahalı. Bunun nedeni, Oracle'ın AI veri merkezi yatırımları için aldığı devasa borç yükü ve bunun şirketin nakit akışına getirdiği baskı. ORCL zaten portföydeki en kötü performans (maliyetine göre −%36,3); 10 Eylül'de açıklanacak çeyrek bilançosu hem borç endişelerini yatıştırabilir hem de daha da derinleştirebilir, bu yüzden hisse için önümüzdeki en kritik tarih bu."
     },
     {
-      "title": "Önümüzdeki hafta iki büyük gündem maddesi var",
-      "body": "15-16 Eylül'deki Fed (ABD Merkez Bankası) toplantısı en kritik risk: bazı büyük yatırım kuruluşları artık faizlerin sabit kalması yerine küçük bir artış beklediklerini söylüyor — bunun nedeni Ortadoğu'daki çatışmanın enerji fiyatlarını yukarı itmesi. Bir faiz artırımı, portföyünüzdeki büyüme odaklı teknoloji hisselerinin neredeyse tamamını olumsuz etkiler. İkinci önemli tarih ise 9 Eylül'de açıklanacak Oracle bilançosu — portföydeki en kötü performans olan bu hisse için hem yukarı hem aşağı sürpriz potansiyeli var. Ayrıca büyük teknoloji şirketlerinin 2026'da yapay zekaya ayırdığı devasa harcama (yaklaşık 635-690 milyar dolar) hâlâ tartışma konusu ve bazı analistler bu tempoyu sürdürülebilir bulmuyor."
+      "title": "Depolama ve nükleer yakıtta olumlu ama SanDisk'te kâr satışı",
+      "body": "SanDisk (SNDK), bellek çipi (NAND/DRAM) kıtlığı temasıyla bu yıl %500'ün üzerinde değer kazandı, 21 Eylül'de S&P 100 endeksine girecek ve 14 milyar dolarlık hisse geri alım programı yürütüyor — ama son beş günde yaklaşık %7 geriledi, bu da uzun süredir yükselen bir hissede beklenen bir kâr satışı olarak görülüyor. Centrus Energy (LEU) tarafında tablo istikrarlı olumlu: X-energy ile imzalanan yeni bir zenginleştirilmiş uranyum (HALEU) tedarik anlaşması ve neredeyse tüm analistlerin 'Al' tavsiyesiyle desteklenen güçlü bir görünüm sürüyor."
     },
     {
       "title": "Sizin için ne anlama geliyor",
-      "body": "Bu hafta kripto madenciliği, depolama ve nükleer yakıt tarafında olumlu haberler ağırlıktaydı, ama önümüzdeki iki hafta (Fed toplantısı ve Oracle bilançosu) portföyün asıl yönünü belirleyecek gerçek testler olacak. Dokuz pozisyonun tamamı tek bir temaya (AI altyapısı ve kripto madenciliği) bağlı olduğu için, bu iki gelişme öncesinde acele alım-satım kararı vermek yerine sakin kalıp haberleri takip etmek daha mantıklı olur."
+      "body": "Önümüzdeki iki hafta portföy için gerçek bir sınav: 10 Eylül'de Oracle'ın bilançosu (borç endişelerini artırabilir ya da azaltabilir) ve 15-16 Eylül'deki Fed toplantısı (Ortadoğu'daki gerginliğin enerji fiyatlarını yukarı itmesi nedeniyle piyasa artık küçük bir faiz artışı ihtimalini de fiyatlıyor — bu büyüme hisselerinin tamamını olumsuz etkiler). Ayrıca büyük teknoloji şirketlerinin yapay zekâya yaptığı devasa harcamanın (2026'da tahminen 700 milyar doların üzerinde) getiri üretip üretemeyeceği tartışması sürüyor ve kripto madenciliğinde küresel düzenlemeler sıkılaşma eğiliminde. Dokuz pozisyonun tamamı tek bir temaya bağlı olduğundan, bu iki kritik tarihten önce acele karar vermek yerine sakin kalıp haberleri takip etmek en mantıklısı."
     }
   ]
 }
