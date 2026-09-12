@@ -1,28 +1,28 @@
 {
-  "date": "11 Eylül 2026",
+  "date": "12 Eylül 2026",
   "outlook": "notr",
-  "outlookLabel": "Karışık Gün: Oracle Toparlandı, Piyasa Enflasyon Verisini Bekliyor",
-  "summary": "Salı günü portföydeki dokuz hisseden sekizi düştü, ama Oracle'ın bilanço sonrası gece yarısı gelen güçlü toparlanması umut verdi; bugün açıklanan enflasyon verisi ve gelecek haftaki Fed kararı önümüzdeki günlerin yönünü belirleyecek.",
+  "outlookLabel": "Karışık Gün: Bilançolar Güçlü, Faiz Artışı Riski Gölgede",
+  "summary": "Oracle, CoreWeave ve ServiceNow'daki güçlü bilanço rüzgarı portföyü desteklemeye devam ediyor, ama Centrus Energy'deki yeni hisse satışı ve gelecek haftaki Fed toplantısında beklenmedik bir faiz artışı ihtimali gölge düşürüyor.",
   "sections": [
     {
-      "title": "Dün portföyde sert bir düşüş günü yaşandı",
-      "body": "Salı günü (10 Eylül) portföydeki dokuz hisseden sekizi geriledi, sadece ServiceNow (NOW) yatay kaldı. En sert düşüş nükleer yakıt şirketi Centrus Energy'de (LEU, −%8,6) yaşandı — şirket 500 milyon dolarlık yeni hisse satışı (halka arz) duyurdu; bu, mevcut hissedarların payının 'sulanması' anlamına gelir, yani aynı şirketten artık daha fazla hisse var. CoreWeave (CRWV, −%6,1) içeriden satışların (yöneticilerin kendi hisselerini elden çıkarması) baskısıyla geriledi. Madencilik hisseleri RIOT (−%5,1), SanDisk (−%4,1), IREN (−%3,8) ve CleanSpark (−%3,6) ile Oracle (−%5,4) ve Palantir (−%2,2) de piyasadaki genel temkinli havayla değer kaybetti."
+      "title": "Bilanço sezonu rüzgarı sürüyor",
+      "body": "Oracle (ORCL), 10 Eylül'de açıkladığı bilançoda geliri yıllık %30 artırdı; bulut altyapısı geliri ise %121 büyüyerek beklentileri fena halde geçti ve şirket yıl sonu hedeflerini yukarı revize etti. CoreWeave (CRWV) de güçlü ikinci çeyrek sonuçlarının ardından 8 Eylül'de tek günde %11,7 yükseldi — 'sipariş defteri' (imzalanmış ama henüz teslim edilmemiş sözleşmelerin toplam değeri) 104,2 milyar dolara ulaştı ve Nvidia şirketteki payını artırdı. ServiceNow (NOW) için de analistler hedef fiyatlarını yükseltmeye devam ediyor (Needham 155$, BTIG 170$); hisse, temmuz ayındaki bilançodan bu yana yaklaşık %37 değer kazandı."
     },
     {
-      "title": "Gece yarısı haberi: Oracle beklentileri fena halde geçti",
-      "body": "Oracle (ORCL), Salı akşamı piyasa kapandıktan sonra açıkladığı bilançoda beklentileri açık ara geçti: hisse başına kâr 1,92 dolar (beklenti 1,74$), gelir 19,35 milyar dolar (beklenti 19,14 milyar$). En dikkat çekici rakam, bulut altyapısı gelirinin yıllık %121 artmasıydı; şirketin 'ileride faturalanacak sözleşme büyüklüğü' (imzalanmış ama henüz faturalanmamış uzun vadeli anlaşmaların toplamı) 664 milyar dolara yükseldi — beklenti 630,6 milyar dolardı. Hisse gündüz seansında %5,4 düşmüştü ama bilanço sonrası işlemlerde %4,3 toparlanarak 159,58 dolara çıktı; bu, portföyün maliyetine göre en kötü performans gösteren pozisyonu için cesaret verici bir gelişme."
+      "title": "Kripto madenciliği hisseleri yapay zekâya dönüşümünü sürdürüyor",
+      "body": "IREN, Teksas'taki dev Sweetwater veri merkezi projesinin bölgesel elektrik şebekesi (ERCOT) onay sürecinde bir sonraki aşamaya geçtiğini duyurdu — projenin hayata geçme ihtimalini güçlendiren olumlu bir adım. Buna rağmen IREN hissesi bu hafta geriledi; yönetim 'operasyonel testleri geçtiklerini' söylese de yatırımcılar hâlâ somut gelir rakamları görmek istiyor. RIOT ise Anthropic ile yapılan 9,1 milyar dolarlık kiralama anlaşmasının ardından yapay zekâ kiracı kapasitesini 241 megavata çıkardı; bitcoin fiyatı bu hafta ~77.000 dolar civarında yatay seyrediyor, yani madencilik gelirleri üzerindeki baskı şimdilik sabit kalıyor."
     },
     {
-      "title": "Makroda gerginlik: İran, enerji fiyatları ve enflasyon",
-      "body": "İran'daki çatışmanın yeniden alevlenmesi bu hafta petrol ve doğalgaz fiyatlarını sert yükseltti — Brent petrol 100 dolara yaklaştı, Avrupa'da doğalgaz vadelileri üç yılın zirvesinde. Bu durum enflasyonu yukarı çekme riski taşıyor ve bugün (11 Eylül) açıklanan ABD enflasyon verisinin (CPI, tüketici fiyat endeksi) önemini artırıyor — piyasa yıllık yaklaşık %3,4 civarında bir rakam bekliyor. 15-16 Eylül'deki Fed (ABD merkez bankası) toplantısı öncesinde bazı stratejistler, enerji kaynaklı enflasyon baskısı yüzünden faiz artışı ihtimalini bile konuşuyor; bu normalde beklenmeyen bir senaryo ve borçla büyüyen CRWV, ORCL gibi şirketler için ekstra risk demek."
+      "title": "Risk: Beklenmedik bir faiz artışı ihtimali masada",
+      "body": "Bu hafta açıklanan enflasyon verisi (CPI) yıllık %3,4 ile beklentilere yakın geldi ve piyasalar rahatladı (S&P 500 %0,86, Nasdaq %0,96 yükseldi). Ancak İran gerginliği yüzünden yükselen petrol ve doğalgaz fiyatları enflasyonu yukarı itebileceğinden, piyasa fiyatlamaları 16 Eylül'deki Fed toplantısında faiz artışı ihtimalini %90'a kadar yükseltti — bu, normalde faiz indirimlerinin konuşulduğu bir dönemde alışılmadık bir senaryo. Böyle bir artış gerçekleşirse, borçla büyüyen CRWV ve ORCL gibi şirketler için ekstra maliyet demek. Ayrıca Centrus Energy (LEU), 500 milyon dolarlık yeni hisse satışını 11 Eylül'de tamamladı; bu da mevcut hissedarların payının 'sulanması' (aynı şirkette artık daha fazla hisse olması) anlamına geliyor ve hisse bu haberle sert düştü."
     },
     {
-      "title": "Kripto madenciliğinden yapay zekâya dönüşüm sürüyor",
-      "body": "Bitcoin bu hafta 78.000 doların altına sarkarak madencilik hisselerine baskı yaptı, ama şirketlerin temel hikâyesi değişmedi. IREN, Teksas'taki Sweetwater veri merkezi projesinin ERCOT (Teksas elektrik şebekesi) onay sürecine girmesiyle ilerlemeye devam ediyor; Microsoft ve Nvidia ile toplamda milyarlarca dolarlık uzun vadeli anlaşmaları var. RIOT, sıfırdan başlayan yapay zekâ kiracı kapasitesini 241 megavata çıkardı ve bir yapay zekâ şirketiyle 20 yıllık, 9,1 milyar dolarlık kira sözleşmesi imzaladı. Palantir ise eylül ayı başından beri yaklaşık %9,5 geriledi — güçlü PwC ortaklığı haberine rağmen, yatırımcı Michael Burry'nin 'yapay zekâ balonu' uyarısı ve 150 kattan yüksek fiyat/kazanç oranı kâr satışlarını tetikliyor."
+      "title": "Arka planda büyüyen bir tartışma: Yapay zekâya aşırı mı harcanıyor?",
+      "body": "Büyük teknoloji şirketleri (Oracle dahil) bu yıl yapay zekâ altyapısına toplam yaklaşık 725 milyar dolar harcayacak — geçen yılın neredeyse iki katı. Analistler, bu harcamaların gelire dönüşme hızının yeterli olmadığını ve aradaki farkın büyüdüğünü belirtiyor; bazı büyük şirketlerde 'serbest nakit akışı' (şirkete günlük giren ve çıkan nakit arasındaki fark) ilk kez negatife dönüyor. Portföyün tamamı yapay zekâ temasına bağlı olduğu için, harcamalar beklenen geliri getirmezse sektördeki tüm hisseler birlikte etkilenebilir — uzun vadede izlenmesi gereken yapısal bir risk."
     },
     {
-      "title": "Riskler ve basitçe ne anlama geliyor",
-      "body": "Üç risk öne çıkıyor: (1) bugünkü enflasyon verisi ve gelecek haftaki Fed faiz kararı — enerji fiyatları yüzünden sürpriz bir faiz artışı ihtimali, borçla büyüyen şirketler (CRWV, ORCL) için olumsuz olur; (2) LEU'daki gibi yeni hisse satışları mevcut hissedarlar için sulanma riski taşır — şirketlerin büyüme parasını nereden bulduğuna dikkat etmek gerekir; (3) PLTR ve SNDK gibi çok yükselmiş pozisyonlarda değerleme endişesi sürüyor, bu da ani düşüşlere açık olduğu anlamına gelir. Basitçe özetlemek gerekirse: dün portföy geneli zor bir gün geçirdi ama Oracle'ın gece yarısı gelen güçlü bilançosu cesaret verici bir sinyal; bugünkü enflasyon verisi ve gelecek haftaki Fed kararı kısa vadede yönü belirleyecek — acil bir işlem yapmaya gerek yok, sadece bu iki gelişmeyi yakından izlemekte fayda var."
+      "title": "Basitçe özetlemek gerekirse",
+      "body": "Bugün portföydeki dokuz hisseden çoğu hafif yükseldi; Centrus Energy (LEU) yeni hisse satışının etkisiyle sert geriledi, SanDisk (SNDK) ve Oracle (ORCL) ise hafif kayıp yaşadı. Bilanço sezonunun genel havası hâlâ olumlu ama gelecek hafta Fed'in olağandışı bir faiz artışı kararı alıp almayacağı kısa vadede yönü belirleyecek. Acil bir işlem yapmanıza gerek yok; sadece 16 Eylül'deki Fed açıklamasını ve LEU'daki hisse sulanmasının fiyata etkisini yakından takip etmekte fayda var."
     }
   ]
 }
